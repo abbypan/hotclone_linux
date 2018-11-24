@@ -1,0 +1,9 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+LANG=zh_CN.UTF-8
+LANGUAGE=zh
+LC_CTYPE=zh_CN.UTF-8
+
+# m h  dom mon dow   command
+0 2 * * * /usr/bin/apt-get update
+0 4 * * * /usr/bin/apt-get clean
