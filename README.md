@@ -2,17 +2,19 @@
 
 hotclone linux vps, take debian for example
 
-hotclone src_host to dst_host
+hotclone src.xxx.com to dst.yyy.com
 
-1) login src_host, save crontab task
+1) login src.xxx.com, save crontab task
 
     crontab -l > backup.crontab
 
-2) copy 3 files to dst_host /tmp
+2) copy 3 files to dst.yyy.com /tmp
 
-    backup.crontab hotclone_exclude.txt  hotclone.pl
+    hotclone.pl
+    hotclone_exclude.txt
+    backup.crontab
 
-3) login dst_host, hotclone data from src_host
+3) login dst.yyy.com, hotclone data from src.xxx.com
     
     cd /tmp
-    ./hotclone.pl src_host
+    ./hotclone.pl src.xxx.com
